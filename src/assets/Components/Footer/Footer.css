@@ -1,0 +1,32 @@
+.footer{
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #797979;
+    /*background:darkblue;*/
+    padding: 15px 0;
+    height: 200px;
+    color: darkblue;
+}
+.footer ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    color: darkblue;
+}
+
+/* ---- media query ----*/
+
+@media  screen and (max-width: 600px){
+    .footer{
+        display: block;
+        text-align: center;
+    }
+    .footer ul li{
+        margin: 10px;
+    }
+    .footer ul{
+        margin-top: 10px;
+    }
+}
