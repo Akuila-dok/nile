@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Admissions.css';
 
 const Admissions = () => {
@@ -8,7 +9,9 @@ const Admissions = () => {
       <p>
         Welcome to our admissions section. Here, you'll find information about our admission process and criteria.
       </p>
-      <button onClick={() => window.location.href='/admission-criteria'}>Explore More</button>
+      <Link to="/nile/admission-criteria">
+        <button>Explore More</button>
+      </Link> {/* Wrap the button with Link component */}
     </div>
   );
 }

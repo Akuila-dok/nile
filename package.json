@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Akuila-dok.github.io/nile",
+  "homepage": "https://Akuila-dok.github.io/nilesalvation",
   "name": "nile-salvation-college-of-science-and-technology",
   "private": true,
   "version": "0.0.0",
@@ -10,11 +10,12 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.0",
     "react-scroll": "^1.9.0"
   },
   "devDependencies": {
