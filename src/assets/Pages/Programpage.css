@@ -1,0 +1,22 @@
+.programpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  min-height: 100vh; 
+}
+
+
+.programspage p {
+  background: lightblue;
+  color: cadetblue;
+  padding: 10px;
+  font-size: 14px; /* Smaller font size */
+}
+
+/* Smaller font size for h3 on smaller screens */
+@media screen and (max-width: 768px) {
+  .programpage h3 {
+    font-size: 14px; 
+  }
+}

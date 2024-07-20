@@ -1,0 +1,36 @@
+.partnership {
+    padding: 10px;
+}
+
+.partners {
+    margin-top: 10px;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+.dark .images h3{
+    color: antiquewhite;
+}
+
+/* Center the images within the slider */
+.slick-slide img {
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 768px) {
+    .partners {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10px;
+    }
+
+    .content {
+        margin-bottom: 0;
+    }
+   
+    .images{
+        padding: 10px;
+
+    }
+}

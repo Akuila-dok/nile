@@ -1,32 +1,65 @@
-.footer{
-    margin: 10px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 2px solid #797979;
-    /*background:darkblue;*/
-    padding: 15px 0;
-    height: 200px;
-    color: darkblue;
+.footer {
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid #797979;
+  padding: 15px;
+  height: auto;
+  color: white;
+  background: linear-gradient(to right, black, black); /* Gradient from left to right */
 }
+.footer .donate{
+  background-color: darkblue;
+  color: aliceblue;
+}
+
+.footer ul {
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
 .footer ul li {
-    list-style: none;
-    display: inline-block;
-    margin-left: 20px;
-    color: darkblue;
+  list-style: none;
+  display: inline-block;
+  margin-left: 20px;
+  color: white;
+  line-height: 1.0; /* Default line height */
 }
 
-/* ---- media query ----*/
+.footer ul li a {
+  line-height: 1.0; /* Set line height for links */
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+}
 
-@media  screen and (max-width: 600px){
-    .footer{
-        display: block;
-        text-align: center;
-    }
-    .footer ul li{
-        margin: 10px;
-    }
-    .footer ul{
-        margin-top: 10px;
-    }
+.footer ul li img {
+  width: 25px; 
+  height: 25px; 
+  padding: 5px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 5px 10px 0px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+}
+
+/* ---- media query ---- */
+@media screen and (max-width: 600px) {
+  .footer {
+    display: block;
+    text-align: center;
+  }
+  .footer ul li {
+    margin: 10px;
+  }
+  .footer ul {
+    margin-top: 10px;
+  }
+  .footer ul li img {
+    width: 30px; 
+    height: 30px; 
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 10px 0px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+  }
 }

@@ -11,3 +11,11 @@
     color: #000F38;
     margin-top: 5px;
 }
+
+/* Smaller font size for h3 on smaller screens */
+@media screen and (max-width: 768px) {
+    .title h2 {
+      font-size: 16px; 
+    }
+  }
+  

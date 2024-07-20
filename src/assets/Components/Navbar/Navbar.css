@@ -1,6 +1,7 @@
 nav{
     width:100%;
-    color: #fff;
+    color: white;
+    opacity: .9;
     padding: 4px 0;
     position: fixed;
     top: 0;
@@ -11,21 +12,78 @@ nav{
     z-index: 10;
 }
 .mylogo{
-    width: 180px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
 }
+
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 5px 20px;
-    font-size: 16px;
+    margin: 5px 10px;
+    font-size: 14px;
+}
+
+nav.container{
+    inherits: none;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.btn{
+    padding: 5px;
 }
 
 .blue-nav{
-    background: #212EA0;
+    background: linear-gradient(to right, darkblue, blue); /* Gradient from left to right */
     transition: 0.7s;
+}
+.dark .blue-nav{
+    background: #000;
+    color: #fff;
+}
+.dark .search-box{
+    background: #fff;
+    color: #000;
+}
+.dark .search-box input{
+    color: #222;
+
+}
+.dark .search-box input::placeholder{
+    color: #222;
 }
 .menu-icon{
     display: none;
+}
+.toggle-icon{
+    width: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    background: #242424;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+.search-box input{
+    padding: 6px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 18px;
+    max-width: 200px;
+}
+.search-box input::placeholder{
+    color: #fff;
+}
+.search-box img{
+    width: 20px;
+    cursor: pointer;
 }
 
 /* ----- media query -----*/
@@ -40,7 +98,7 @@ nav ul li{
 
 @media  screen and (max-width: 850px){
     nav{
-        padding: 15px 0;
+        padding: 15px;
     }
     nav ul{
         position: fixed;
@@ -58,10 +116,47 @@ nav ul li{
         display: block;
         margin:  25px 40px;
     }
+    .blue-nav{
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        outline: 0;
+        align-items: center;
+    }
     .menu-icon{
         display: block;
         width: 30px;
         cursor: pointer;
+    }
+    .search-box{
+        display: flex;
+        cursor: pointer;
+        margin: 10px;
+    }
+    .search-box input{
+        padding: 2px;
+        background: transparent;
+        justify-content: center;
+        align-items: center;
+        border: 0;
+        outline: 0;
+        color: #fff;
+        font-size: 14px;
+        max-width: 50px;
+        margin-right: 0;
+        outline: 0;
+    }
+    .search-box img{
+        width: 15px;
+        cursor: pointer;
+       
+    }
+    .toggle-icon{
+        display: block;
+        width: 35px;
+        cursor: pointer;
+        margin-left: 0;
+        margin-right: 0;
     }
     .hide-mobile-menu{
         right: -200px;

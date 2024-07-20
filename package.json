@@ -1,6 +1,6 @@
 {
-  "homepage": "https://Akuila-dok.github.io/nile",
-  "name": "nile-salvation-college-of-science-and-technology",
+  "homepage": "https://nilesalvationcollege.edu.ss",
+  "name": "nilesalvationcollege",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,13 +15,16 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.23.0",
-    "react-scroll": "^1.9.0"
+    "react-scroll": "^1.9.0",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
-    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-react": "^4.3.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",

@@ -1,58 +1,85 @@
-import React from 'react'
-import './About.css'
-import about_img from '../../../assets/about.png'
+import React, { useEffect, useRef } from 'react';
+import './About.css';
+//import about_img from '../../../assets/nileabout.jpg';
+//import mission_icon from '../../../assets/mission.png';
+//import vision_icon from '../../../assets/vision.png';
+//import values_icon from '../../../assets/values.png';
+
+
 
 const About = () => {
+  const paragraphsRef = useRef([]);
+
+  useEffect(() => {
+    const options = {
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('bounce');
+          // Remove the class after animation completes to allow re-triggering
+          setTimeout(() => {
+            entry.target.classList.remove('bounce');
+          }, 2000); // Match this duration to your animation time
+        }
+      });
+    }, options);
+
+    paragraphsRef.current.forEach(p => {
+      if (p) observer.observe(p);
+    });
+
+    return () => {
+      if (paragraphsRef.current) {
+        paragraphsRef.current.forEach(p => {
+          if (p) observer.unobserve(p);
+        });
+      }
+    };
+  }, []);
+
   return (
     <div className='about'>
-      <div className="about-left">
-        <img src={about_img} alt="" className='about-img'/>
-      </div>
+     
       <div className="about-right">
-        <h2>NILE SALVATION COLLEGE</h2>
-        <h2>Centre of Change and Innovation</h2>
-        <p>
-       <h2>MISSION</h2> 
-        To craft an atmosphere in which novel ideas, exploration, and transformative innovations would lead to addressing glitches
-        that challenged the universe and let the world through talent</p>
-      
-        <p>
-              <h2>VISION</h2>
-            To expedient an excellent knowledge-sharing and communal accountability sector with extraordinary professionalism.
-        To be a community-based anchor institution cultivating equity-minded social impact and global innovation.
+        <p ref={el => paragraphsRef.current[0] = el}>
+          <i>
+            <br/>
+            <h2>MISSION</h2> 
+            To transform and empower communities for access to education, 
+            ensuring that every individual regardless of the background 
+            status, gender, location, race has access to equal education 
+            and learning opportunities.
+
+          </i>
         </p>
-        <h2>VALUES</h2>
-        <ol>
-            <li>Knowledge that includes critical judgment.</li>
-            <li>Transformation to promote personal growth.</li>
-            <li>Purpose and passion as principles for decisions and actions; and Respect, integrity, and inclusiveness as attributes of morality and justice.</li>
-            <li>Commitment to communities served.</li>
-        </ol>
-        <h2>ACADEMIC PHILILOSOPHY</h2> 
-        <p>The Community college empowers its students to 
-            become engaged citizens and lifelong learners,
-        able to demonstrate the following 
-        institutional learning outcomes:</p> 
-        <ol>
-            <li>Communicate effectively through writing, speaking, and creative expression</li>
-            <li>Employ scientific and quantitative reasoning to engage in critical analysis and make evidence-based decisions</li>
-            <li>Use established and emerging technologies to identify and apply information</li>
-            <li>Recognize and consider a diversity of values and ethical beliefs; and</li>
-            <li>Learn how to become actively engaged citizens in the communities they serve.</li>
-        </ol>
 
-        <h2>GENERAL OBJECTIVES</h2>
-        <ol>
-            <li>To Empower Generations through skills development </li>
-            <li>To impart knowledge that ignite change through innovations</li>
-            <li>To train infinite researchers to promote globalization </li>
-            <li>To transform leaders of the generation to embrace technology   </li>
+        <p ref={el => paragraphsRef.current[1] = el}>
+          <i>
+            <h2>VISION</h2>
+            To re-create a living society where an individual has 
+            profitable knowledge and skills to benefit the society.
 
-        </ol>
-        
+          </i>
+        </p>
+
+        <p ref={el => paragraphsRef.current[2] = el}>
+          <i>
+            <h2>OBJECTIVES</h2>
+            <ol>
+              <li>To fight against genders-based inequality.</li>
+              <li>To promote sports activities.</li>
+              <li>To improve learners performance in their academic studies.</li>
+              <li>To promote kids mentorship programs.</li>
+              <li>To promote literacy in the community.</li>
+            </ol>
+          </i>
+        </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

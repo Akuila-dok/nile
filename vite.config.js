@@ -3,6 +3,11 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/nile",
   plugins: [react()],
+
+  server: {
+    mimeTypes: {
+      'application/javascript': ['jsx']
+    }
+  }
 })

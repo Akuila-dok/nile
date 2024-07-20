@@ -1,52 +1,85 @@
-.about{
-    margin: 100px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
+.about {
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
 }
-.about-left{
-    flex-basis: 40%;
-    position: relative;
+
+.about-right {
 }
-.about-right{
-    flex-basis: 56%;
+
+.about img {
+  width: 100%;
+  border-radius: 10px;
 }
-.about img{
-    width: 100%;
-    border-radius: 10px;
+
+.about-right h2, h3 {
+  color: darkblue;
+  padding: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
 }
-.about-right h2, h3{
-    color: darkblue;
-    padding: 10px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 600;
-  }
-  .about p, ol{
-    font-size: medium;
-    background: white;
-    margin-top: 10px;
-    border-radius: 10px;
-    padding: 10px;
-  }
-  .about p h2{
-    text-align: center;
-  }
+
+.about p, ol {
+  font-size: medium;
+  background: linear-gradient(to right, white, aliceblue);
+  color: blue;
+  opacity: .8;
+  margin-top: 10px;
+  padding: 30px;
+  line-height: 1.8;
+  margin-bottom: 30px; /* Increased space between paragraphs */
+}
+
+.about p h2 {
+  text-align: center;
+}
+
+/* Style for the about icons */
+.about-icon {
+  width: 50px;
+  display: block;
+  margin: 10px auto; /* Center the icons */
+  padding: 5px;
+}
 
 
-  /* ---- Media Query ----- */
-
-  @media  screen and (max-width: 800px){
-    .about{
-      flex-direction: column;
-    }
-    .about-left{
-      flex-basis: 100%;
-      margin: 20px;
-      /*order: 2;*/
-    }
-    .about-right{
-      flex-basis: 100%;
-    }
+/* Bounce animation keyframes */
+@keyframes bounceIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
   }
+  50% {
+    transform: translateY(-10%);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Class to apply the bounce animation */
+.bounce {
+  animation: bounceIn 1s ease-in-out;
+}
+
+/* ---- Media Query ----- */
+@media screen and (max-width: 800px) {
+  .about {
+    flex-direction: column;
+  }
+  .about-left {
+    flex-basis: 100%;
+    margin: 20px;
+    /*order: 2;*/
+  }
+  .about-right {
+    flex-basis: 100%;
+  }
+}
